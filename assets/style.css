@@ -1,0 +1,347 @@
+
+:root{
+ 
+--accent1: #1e88e5;
+  
+--accent2: #1565c0;
+  
+--bg: linear-gradient(180deg,#f5f9ff,#ffffff);
+  
+--muted: #6b7280;
+  
+--card: #ffffff;
+  
+--maxw: 1100px;
+
+}
+
+*{
+box-sizing:border-box
+}
+
+body{
+margin:0;
+font-family:Inter, 'Poppins', system-ui, Arial; 
+background:var(--bg); 
+color:#122; 
+-webkit-font-smoothing:antialiased
+}
+
+.container{
+width:95%;
+max-width:var(--maxw);
+margin:0 auto
+}
+
+
+/* Top header */
+
+.topbar{
+background:linear-gradient(90deg,var(--accent1),var(--accent2));
+color:white;
+padding:28px 0;
+box-shadow:0 8px 30px rgba(21,101,192,0.12)}
+.topbar .container{display:flex;flex-direction:column;
+align-items:center;
+gap:6px}
+.school-name{font-size:28px;
+margin:0;
+font-weight:700;
+letter-spacing:0.2px
+}
+
+.motto{
+margin:0;
+font-style:italic;
+opacity:0.95; 
+font-size:14px
+}
+
+
+/* Nav */
+
+.nav-wrap{
+background:transparent
+}
+
+.nav-inner{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:14px 0
+}
+
+.brand-left .logo{
+height:68px;
+width:68px;
+object-fit:cover;
+border-radius:12px;
+box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+.main-nav{display:flex;
+align-items:center;
+gap:10px
+}
+
+.hamburger{display:none;
+background:transparent;
+border:0;
+font-size:28px;
+cursor:pointer;
+color:#0b4ea2
+}
+
+.nav-links{list-style:none;
+display:flex;
+gap:6px;
+margin:0;
+padding:0;
+align-items:center
+}
+
+.nav-link{
+display:block;
+padding:10px 14px;
+color:#08306b;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+transition:all .18s
+}
+
+.nav-link:hover,.nav-link.active{
+background:rgba(30,136,229,0.08);
+color:var(--accent2)
+}
+
+
+/* dropdown */
+
+.dropdown{
+position:relative
+}
+
+.dropdown-menu{
+display:none;
+position:absolute;
+top:44px;
+left:0;
+background:var(--card);
+box-shadow:0 10px 30px rgba(2,6,23,0.08);
+border-radius:10px;
+padding:8px;
+min-width:180px;
+}
+
+.dropdown-menu a{
+display:block;
+padding:10px 12px;
+color:#122;
+text-decoration:none;
+border-radius:8px;
+}
+
+.dropdown:hover .dropdown-menu{
+display:block
+}
+
+/* ===== Slider ===== */
+.slider {
+  width: 100%;
+  height: auto;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+
+
+/* Grid cards */
+
+.main-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+padding:28px 0;
+}
+
+.card{
+background:var(--card);
+background-color: #fdebd0;
+padding:18px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(2,6,23,0.04);
+}
+
+.card h2{
+color:var(--accent2);
+margin-top:0;
+}
+
+
+/* heads & students */
+
+.section{
+padding:36px 0;
+background: #c8e6c9;
+}
+
+.center{
+text-align:center;
+color: #004aad
+}
+
+.heads-grid, .students-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:20px;
+align-items:start;
+margin-top:18px;
+}
+.person,.student{
+background:var(--card);
+background: #98FF98;
+padding:14px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 8px 20px rgba(2,6,23,0.04);
+}
+
+.person img,.student img{
+width:140px;
+height:140px;
+object-fit:cover;
+border-radius:50%;margin:0 auto;
+display:block;
+box-shadow:0 8px 20px rgba(2,6,23,0.06);
+}
+
+.person h3,.student h4{
+margin:12px 0 6px;
+}
+
+.person p,.student p{
+margin:0;color:var(--muted);
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-section {
+  padding: 20px;
+  background-color: #ecf0f1;
+  text-align: center;
+}
+
+.gallery-section .gallery-images {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.gallery-section .gallery-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.gallery-section .gallery-item p {
+  margin-top: 10px;
+}
+
+.gallery-section .gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+
+/* footer */
+
+.footer{
+background:linear-gradient(90deg,var(--accent2),var(--accent1));
+background: #232f3e;
+color:white;
+padding:22px 0;
+margin-top:30px;
+}
+
+.footer .footer-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+
+/* reveal animations */
+
+.reveal{
+opacity:0;
+transform:translateY(18px);
+transition:all .7s ease;
+}
+
+.reveal.visible{
+opacity:1;
+transform:none;
+}
+
+
+/* responsive */
+
+@media (max-width: 900px){
+.slide img{
+height:320px;
+}
+.school-name{
+font-size:22px;
+}
+}
+
+@media (max-width: 768px){
+
+.hamburger{
+display:inline-block;
+}
+  
+.nav-links{
+display:none;
+}
+  
+.nav-links.show{
+display:flex;flex-direction:column;
+gap:0;
+position:fixed;
+right:18px;
+top:90px;
+width:220px;
+background:#fff;
+padding:12px;
+box-shadow:0 12px 30px rgba(0,0,0,0.12);
+border-radius:12px;
+}
+  
+.slide img{
+height:220px;
+}
+  
+.container{
+width:94%;
+}
+  .footer .footer-inner{
+flex-direction:column;
+text-align:center;
+}
+  .heads-grid{
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+}
+  
+.students-grid{
+grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+}
+
+}
